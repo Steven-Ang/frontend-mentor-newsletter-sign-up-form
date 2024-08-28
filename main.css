@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(235, 18%, 26%);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  color: hsl(235, 18%, 26%);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.newsletter-image {
+  width: 100%;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 1.6em;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.article-heading {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.article-list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.article-list-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.article-list-item span {
+  vertical-align: middle;
+}
+
+#newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.email-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.email-label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-label {
+  font-weight: bold;
+}
+
+.email-input {
+  width: 100%;
+}
+
+.email-error-text {
+  visibility: hidden;
+  color: hsl(4, 100%, 67%);
+  font-weight: bold;
+}
+
+.email-input {
+  border: 1px solid hsl(231, 7%, 60%);
+  padding: 1em 2em;
+  color: hsl(231, 7%, 60%);
+  border-radius: 8px;
+}
+
+.email-input.error {
+  border: 1px solid hsl(4, 100%, 67%);
+  padding: 1em 2em;
+  color: hsl(4, 100%, 67%);
+  border-radius: 8px;
+  background-color: hsl(4, 100%, 67%, 20%);
+}
+
+.email-error-text.error {
+  visibility: visible;
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 8px;
+  padding: 1em;
+  font-weight: bold;
+}
