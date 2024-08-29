@@ -23,7 +23,7 @@
           <picture>
             <source
               srcset="assets/images/illustration-sign-up-desktop.svg"
-              media="(min-width: 1200px)"
+              media="(min-width: 800px)"
             />
             <img
               class="newsletter-image"
@@ -58,17 +58,18 @@
             <div class="email-input-container">
               <div class="email-label-container">
                 <label class="email-label" for="email">Email address</label>
-                <span class="email-error-text">Invalid email</span>
+                <span class="email-error-text">Invalid email required</span>
               </div>
               <input
                 id="email"
                 type="text"
+                name="email"
                 class="email-input"
                 placeholder="email@company.com"
               />
             </div>
             <div class="submit-button-container">
-              <button id="submit-button" class="button">
+              <button type="submit" id="submit-button" class="button">
                 Subscribe to monthly newsletter
               </button>
             </div>
