@@ -32,10 +32,6 @@ body {
   color: hsl(235, 18%, 26%);
 }
 
-.hidden {
-  display: none;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -43,6 +39,12 @@ body {
   width: 100%;
   height: 100%;
   background-color: hsl(0, 0%, 100%);
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .newsletter-image {
@@ -56,15 +58,24 @@ body {
   padding: 0 1.6em;
 }
 
-.article-content {
+.article-content,
+.dismiss-content {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.article-heading {
-  font-size: 2em;
+.article-heading,
+.dismiss-content-heading {
+  font-size: 2.6em;
   font-weight: bold;
+  line-height: 1.2;
+}
+
+.article-description,
+.article-list-item,
+.dismiss-content-description {
+  line-height: 1.4;
 }
 
 .article-list {
@@ -105,7 +116,9 @@ body {
   justify-content: space-between;
 }
 
-.email-label {
+.email-label,
+.email-error-text,
+.subscribed-email {
   font-weight: bold;
 }
 
@@ -116,7 +129,6 @@ body {
 .email-error-text {
   visibility: hidden;
   color: hsl(4, 100%, 67%);
-  font-weight: bold;
 }
 
 .email-input {
@@ -138,6 +150,25 @@ body {
   visibility: visible;
 }
 
+.dismiss-container {
+  margin: 4em 0;
+}
+
+.dismiss-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 1.6em;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1em;
+}
+
 .button {
   width: 100%;
   text-align: center;
@@ -146,4 +177,50 @@ body {
   border-radius: 8px;
   padding: 1em;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 780px;
+    border-radius: 1.5em;
+    padding: 1em;
+    height: auto;
+  }
+
+  .container.dismiss {
+    width: 530px;
+    border-radius: 1.5em;
+    padding: 0 3em;
+    height: auto;
+  }
+
+  .article-heading,
+  .dismiss-content-heading {
+    font-size: 3.5em;
+  }
+
+  .article-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-container {
+    order: 2;
+  }
+
+  .button {
+    font-size: 0.8em;
+    padding: 1.4em 1em;
+  }
 }

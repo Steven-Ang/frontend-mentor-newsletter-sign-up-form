@@ -18,69 +18,81 @@
   <body>
     <!-- Sign-up form start -->
     <main class="container">
-      <div class="image-container">
-        <picture>
-          <source
-            srcset="assets/images/illustration-sign-up-desktop.svg"
-            media="(min-width: 600px)"
-          />
-          <img
-            class="newsletter-image"
-            src="assets/images/illustration-sign-up-mobile.svg"
-            alt="Newsletter"
-          />
-        </picture>
-      </div>
-      <img src="" alt="" />
-      <article class="article">
-        <div class="article-content">
-          <h1 class="article-heading">Stay updated!</h1>
-          <p class="article-description">
-            Join 60,000+ product managers receiving monthly updates on:
-          </p>
-          <ul class="article-list">
-            <li class="article-list-item">
-              <img src="assets/images/icon-list.svg" alt="List icon" />
-              <span>Product discovery and building what matters</span>
-            </li>
-            <li class="article-list-item">
-              <img src="assets/images/icon-list.svg" alt="List icon" />
-              <span>Measuring to ensure updates are a success</span>
-            </li>
-            <li class="article-list-item">
-              <img src="assets/images/icon-list.svg" alt="List icon" />
-              <span>And much more!</span>
-            </li>
-          </ul>
-        </div>
-
-        <form id="newsletter-form" novalidate>
-          <div class="email-input-container">
-            <div class="email-label-container">
-              <label class="email-label" for="email">Email address</label>
-              <span class="email-error-text">Invalid email</span>
-            </div>
-            <input
-              id="email"
-              type="text"
-              class="email-input"
-              placeholder="email@company.com"
+      <article class="article-container">
+        <div class="image-container">
+          <picture>
+            <source
+              srcset="assets/images/illustration-sign-up-desktop.svg"
+              media="(min-width: 1200px)"
             />
+            <img
+              class="newsletter-image"
+              src="assets/images/illustration-sign-up-mobile.svg"
+              alt="Newsletter"
+            />
+          </picture>
+        </div>
+        <div class="article">
+          <div class="article-content">
+            <h1 class="article-heading">Stay updated!</h1>
+            <p class="article-description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="article-list">
+              <li class="article-list-item">
+                <img src="assets/images/icon-list.svg" alt="List icon" />
+                <span>Product discovery and building what matters</span>
+              </li>
+              <li class="article-list-item">
+                <img src="assets/images/icon-list.svg" alt="List icon" />
+                <span>Measuring to ensure updates are a success</span>
+              </li>
+              <li class="article-list-item">
+                <img src="assets/images/icon-list.svg" alt="List icon" />
+                <span>And much more!</span>
+              </li>
+            </ul>
           </div>
-          <div class="submit-button-container">
-            <button class="button submit-button">
-              Subscribe to monthly newsletter
-            </button>
-          </div>
-        </form>
+
+          <form id="newsletter-form" novalidate>
+            <div class="email-input-container">
+              <div class="email-label-container">
+                <label class="email-label" for="email">Email address</label>
+                <span class="email-error-text">Invalid email</span>
+              </div>
+              <input
+                id="email"
+                type="text"
+                class="email-input"
+                placeholder="email@company.com"
+              />
+            </div>
+            <div class="submit-button-container">
+              <button id="submit-button" class="button">
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
       </article>
+
       <div class="dismiss-container hidden">
-        <h1>Thanks for subscribing!</h1>
-        <p>
-          A confirmation email has been sent to ash@loremcompany.com. Please
-          open it and click the button inside to confirm your subscription.
-        </p>
-        <button class="dismiss-button">Dismiss message</button>
+        <div class="dismiss-content">
+          <img
+            class="success-icon"
+            src="assets/images/icon-success.svg"
+            alt="Success icon"
+          />
+          <h1 class="dismiss-content-heading">Thanks for subscribing!</h1>
+          <p class="dismiss-content-description">
+            A confirmation email has been sent to
+            <span class="subscribed-email"> ash@loremcompany.com</span>. Please
+            open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+        <div class="dismiss-button-container">
+          <button class="button" id="dismiss-button">Dismiss message</button>
+        </div>
       </div>
     </main>
     <script src="main.js"></script>
